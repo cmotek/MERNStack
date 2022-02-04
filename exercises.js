@@ -2,21 +2,23 @@ console.log("Hello World");
 
 var x = 7;
 var s = "Hi there";
+var fs = require('fs');
 
-function blah(num, str) {
-    if (num == 0) {
-        return "Can't do that";
+function blah(n, s) {
+    if (n == 0) {
+        return "No";
     }
-    return str.toUpperCase() + " " + Math.pow(num,3);
+    return s.toUpperCase() + " " + Math.pow(n,3);
 }
 
-var result = blah(x, s);
+console.log(blah(x,s));
+fs.readFile('package.json', 'utf8', function(err, data) {
+    console.log(data);
+});
 
-console.log(result);
 
+//setTimeout(function () {
+//    console.log('World!');
+//}, 1000)
 
-setTimeout(function () {
-    console.log('World!');
-}, 1000)
-
-console.log('Hello!');
+//console.log('Hello!');
