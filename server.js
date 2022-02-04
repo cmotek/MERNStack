@@ -1,15 +1,8 @@
-console.log("Hello World");
+var http = require('http');
 
-var x = 7;
-var s = "Hi there";
+var server = http.createServer(function (request, response) {
+    response.writeHead(200, {"Content-Type": "text/plain"});
+    response.end("Hello World\n");
+});
 
-function blah(num, str) {
-    if (num == 0) {
-        return "Can't do that";
-    }
-    return str.toUpperCase() + " " + Math.pow(num,3);
-}
-
-var result = blah(x, s);
-
-console.log(result);
+server.listen(3000);
