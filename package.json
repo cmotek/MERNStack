@@ -1,6 +1,7 @@
 {
     "name": "test",
     "dependencies": {
-        "async": "^3.2.3"
+        "async": "^3.2.3",
+        "express": "^4.17.2"
     }
 }
