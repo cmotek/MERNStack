@@ -12,9 +12,26 @@ app.get('/about', function(req, res) {
     res.send("About page");
 });
 
+//app.get('/news', function(req, res) {
+//    res.send("News page");
+//});
+
 app.get('/news', function(req, res) {
-    res.send("News page");
+    console.log(req.query.category);
 });
+
+//getting undefined back on the above
+
+//app.get('/news/categories/:category', function(req, res) {
+//    res.send('Category');
+//    console.log('Your category was ' + req.params.category);
+//});
+
+app.get('/products/:category/:id', function(req, res) {
+    console.log(req.params['category'] + req.params['id']);
+});
+
+//I'm getting back NaN and undefined on the array index for req.params maybe req.route.params?
 
 app.route('/customer')
     .get(function(req, res) {res.send('Get a customer');})
@@ -34,15 +51,6 @@ app.use(function(req, res) {
     res.send('404 - Not found');
 })
 
-//not sure the use function works 
+//not sure the use 404 function works 
 
-app.get('/news/categories/:category', function(req, res) {
-    res.send(category);
-    console.log('Your category was ' + req.params.category);
-});
-
-app.get('/news/categories', function(req, res) {
-    res.send('Categories');
-    //console.log('Your category was ' + req.params.category);
-});
 
