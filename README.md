@@ -17,3 +17,6 @@ Update: I was totally incorrect in my assessment of the example that I was havin
 
 02/08/2022
 Service layer chapters 9.2 ~ 9.3. 
+
+02/17/2022
+Service layer chapters

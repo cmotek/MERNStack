@@ -2,7 +2,12 @@ const { response } = require('express');
 var express = require('express');
 var app = express();
 app.set('port', 3000);
-app.listen(3000);
+
+
+//could not get image use function to work
+
+//app.use('./images', express.static('images'));
+//app.listen(3000);
 
 
 //The below works fine on first try
@@ -26,6 +31,32 @@ routerB.get('/art', function(res, send) {
 app.use('/news', routerA);
 app.use('/blog', routerB);
 
+//Have to get this error handler to work
+
+//var router = express.Router();
+
+//router.delete('/:id', authHelper.checkAuth, function (req, res, next) {
+//    if (req.params.id != '77')
+//        return next(new Error('Invalid request'));
+
+
+//    res.status(200).json({ msg: 'Logged out'});
+//});
+
+
+//Could not get error function to work below, I should probably get this all reworking together, I can't take days off of this book and expect to 'get it' when I get back
+
+//app.get('test/:id', function(req, res, next) {
+//    if (req.params.id == 0)
+//        next(new Error('Not Found'));
+
+//    next()
+//});
+
+//app.use(function(err, req, res, next) {
+//    console.error(err);
+//    res.status(500).send('Something bad happened');
+//});
 
 //Could not get below param and get functions to work will have to return, may require other routings
 
