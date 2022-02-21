@@ -1,7 +1,9 @@
 {
     "name": "test",
+    "type": "module",
     "dependencies": {
         "async": "^3.2.3",
-        "express": "^4.17.2"
+        "express": "^4.17.2",
+        "jade": "^1.11.0"
     }
 }
